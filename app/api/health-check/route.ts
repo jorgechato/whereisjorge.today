@@ -1,13 +1,13 @@
 import { NextResponse } from 'next/server';
 
-import { Status, StatusType } from '@/lib/status-page/FetchData';
+import { lib } from '@jorgechato/manyo';
 import packageInfo from '@/package.json';
 
 
 export async function GET() {
-    const status: Status = {
+    const status: lib.StatusPage = {
         name: 'WHERE IS</br>JORGE TODAY?',
-        type: StatusType.MAINTENANCE,
+        type: lib.StatusPageCode.MAINTENANCE,
         url: 'https://whereisjorge.today',
         version: packageInfo.version,
     };
