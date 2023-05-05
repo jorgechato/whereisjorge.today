@@ -2,7 +2,6 @@ export type NomadList = {
     location: {
         now: Location | [],
         next: Location | [],
-        previous: Location | [],
     },
     trips: Location[] | Location,
 }
@@ -10,11 +9,11 @@ export type NomadList = {
 export type Location = {
     city: string,
     country: string,
-    countr_code: string,
+    countryCode: string,
     thumbnail: string,
     latitude: number,
     longitude: number,
-    date_start: string,
-    date_end: string,
+    dateStart: string,
+    dateEnd: string,
     length: string,
 }
