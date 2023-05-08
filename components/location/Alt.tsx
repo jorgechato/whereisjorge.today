@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 import { Location } from '@/lib/nomadlist/NomadList.types';
 
 
@@ -25,7 +27,7 @@ export function Alt(props: AltProps) {
                 <div className='animate-pulse h-3 w-40 p-1 bg-grey-dark rounded inline-block align-middle'></div> ||
                 (
                     <div className='font-h1 font-bold text-xs text-grey-darker'>
-                        Leaving for {props.next?.country} {props.in}
+                        Leaving for {props.next?.country} {moment(props.in, "YYYY-MM-DD").fromNow()}
                     </div>
                 )
             }

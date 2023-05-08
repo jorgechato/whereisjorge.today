@@ -1,8 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
 
-import moment from 'moment';
-
 import { GetLocation } from './GetData';
 import { NomadList } from '@/lib/nomadlist/NomadList.types';
 import { Marker } from './Marker';
@@ -25,8 +23,7 @@ export function Location({ of }: { of: string }) {
             }
 
             if (!Array.isArray(data?.location.next)) {
-                const days = moment(data?.location.next.dateStart, "YYYY-MM-DD").fromNow();
-                setNextIn(days);
+                setNextIn(data?.location.next.dateStart);
             }
 
             setLoading(false);
