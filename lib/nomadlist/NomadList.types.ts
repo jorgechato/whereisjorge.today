@@ -1,7 +1,7 @@
 export type NomadList = {
     location: {
-        now: Location | [],
-        next: Location | [],
+        now: Location,
+        next: Location,
     },
     trips: Location[] | Location,
 }

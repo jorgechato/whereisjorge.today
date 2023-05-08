@@ -6,7 +6,7 @@ function nomadLocationToLocation(nomadLocation: any): Location {
         city: nomadLocation.city,
         country: nomadLocation.country,
         countryCode: nomadLocation.country_code,
-        thumbnail: nomadLocation.place_photo?.replace("fit=cover,width=100,height=100", "width=400,height=400"),
+        thumbnail: nomadLocation.place_photo?.replace("width=100,height=100", "width=250,height=320")||"",
         latitude: nomadLocation.latitude,
         longitude: nomadLocation.longitude,
         dateStart: nomadLocation.date_start,
