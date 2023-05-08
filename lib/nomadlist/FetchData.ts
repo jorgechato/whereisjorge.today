@@ -2,9 +2,14 @@ import { NomadList, Location } from "./NomadList.types";
 
 
 function nomadLocationToLocation(nomadLocation: any): Location {
+    const city = nomadLocation.place ?? nomadLocation.city;
+    const citySlug = nomadLocation.place_slug ?? nomadLocation.city_slug;
+
     return {
-        city: nomadLocation.city,
+        city: city,
+        citySlug: citySlug,
         country: nomadLocation.country,
+        countrySlug: nomadLocation.country_slug,
         countryCode: nomadLocation.country_code,
         thumbnail: nomadLocation.place_photo?.replace("width=100,height=100", "width=250,height=320")||"",
         latitude: nomadLocation.latitude,
@@ -19,11 +24,12 @@ export function GetLocation(): Promise<NomadList | null> {
     return fetch(`https://nomadlist.com/@${process.env.NOMADLIST_USERNAME}.json?key=${process.env.NOMADLIST_KEY}`)
         .then((res) => res.json())
         .then((data) => {
-            const trips: Location | Location[] = Array.isArray(data.trips) ?
+            const trips: Location[] = Array.isArray(data.trips) ?
                 data.trips
                     .filter((trip: any) => new Date(trip.date_start) > new Date())
-                    .map((trip: any) => nomadLocationToLocation(trip)) :
-                data.trips;
+                    .map((trip: any) => nomadLocationToLocation(trip))
+                    .sort((a: Location, b: Location) => new Date(a.dateStart).getTime() - new Date(b.dateStart).getTime()) :
+                [data.trips];
 
             return {
                 location: {
