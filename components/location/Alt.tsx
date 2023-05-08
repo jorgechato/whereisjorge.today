@@ -13,7 +13,7 @@ export function Alt(props: AltProps) {
     return (
         <>
             <div className="font-h1 font-bold mt-4 text-lg">
-                <span className='text-grey-darker'>{props.of} is currently in </span>
+                <span className='text-grey-darkest'>{props.of} is currently in </span>
                 {
                     (props.loading || props.now == undefined) &&
                     <div className='animate-pulse h-4 w-32 p-4 bg-grey-dark rounded inline-block align-middle'></div> ||
