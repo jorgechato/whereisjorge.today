@@ -7,7 +7,7 @@ import packageInfo from '@/package.json';
 export async function GET() {
     const status: lib.StatusPage = {
         name: 'WHERE IS</br>JORGE TODAY?',
-        type: lib.StatusPageCode.MAINTENANCE,
+        type: lib.StatusPageCode.OK,
         url: 'https://whereisjorge.today',
         version: packageInfo.version,
     };
