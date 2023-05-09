@@ -3,8 +3,7 @@ import './globals.css';
 
 import { Analytics } from '@vercel/analytics/react';
 
-import { Header, Footer } from '@jorgechato/manyo';
-import { Location } from '@/components/location/Location';
+import { Header, Footer, Location } from '@jorgechato/manyo';
 
 
 const config: { [key: string]: any } = require('@/my.config.js');
