@@ -1,6 +1,6 @@
 {
   "name": "whereisjorge.today",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Where you can find me now and in the near future",
   "private": true,
   "scripts": {
@@ -19,7 +19,7 @@
     "autoprefixer": "^10.4.14",
     "emoji-dictionary": "^1.0.11",
     "moment": "^2.29.4",
-    "next": "13.2.4",
+    "next": "^13.4.1",
     "postcss": "^8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
