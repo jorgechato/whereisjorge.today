@@ -9,11 +9,11 @@ module.exports = {
     },
     {
       name: 'Status',
-      url: 'https://whatisjorgedoing.today/status',
+      url: 'https://jorgechato.com/status',
     },
     {
       name: 'About',
-      url: 'https://whatisjorgedoing.today/about',
+      url: 'https://jorgechato.com/about',
     },
   ],
 
