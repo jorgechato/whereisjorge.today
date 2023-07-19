@@ -1,3 +1,6 @@
+import { Location } from '@jorgechato/manyo';
+
+
 export const metadata = {
     title: 'Where is really Jorge today?',
 };
@@ -5,8 +8,7 @@ export const metadata = {
 export default function Home() {
     return (
         <>
-            <section className="mb-12">
-            </section>
+            <Location of="Jorge" />
         </>
     )
 }
