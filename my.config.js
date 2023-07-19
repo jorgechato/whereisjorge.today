@@ -2,10 +2,15 @@ const title = 'WHERE IS</br>JORGE TODAY?';
 
 module.exports = {
   TITLE: title,
+  ARTICLES_LOCATION: 'content/articles',
   SITE_MAP: [
     {
       name: 'Home',
       url: '/',
+    },
+    {
+      name: 'Logbook',
+      url: '/logbook',
     },
     {
       name: 'Status',
