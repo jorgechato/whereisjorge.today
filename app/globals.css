@@ -15,3 +15,7 @@
         @apply h-auto mx-auto transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0;
     }
 }
+
+.alltrails {
+    @apply rounded-lg grayscale hover:grayscale-0 transition duration-300 border-2 border-grey-light;
+}
