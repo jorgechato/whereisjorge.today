@@ -1,6 +1,6 @@
 {
   "name": "whereisjorge.today",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Where you can find me now and in the near future",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@jorgechato/manyo": "^1.11.0",
+    "@jorgechato/manyo": "^1.11.1",
     "@tailwindcss/typography": "^0.5.9",
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",
